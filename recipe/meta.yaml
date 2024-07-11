@@ -5,12 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/asyncio_extras/asyncio_extras-{{ version }}.tar.gz
-  sha256: 084b62bebc19c6ba106d438a274bbb5566941c469128cd4af1a85f00a2c81f8d
+  url: https://github.com/agronholm/asyncio_extras/archive/refs/tags/{{ version }}.tar.gz
+  sha256: af41dbf28200d3a4e29ca3c2330d7d89ef08dd2554a4187ae92b3616f68d04a7
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
